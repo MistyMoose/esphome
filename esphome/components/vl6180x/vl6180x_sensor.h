@@ -1,6 +1,6 @@
 #include "esphome.h"
 #include <Wire.h>
-#include "Adafruit_VL6180X.h"
+#include <Adafruit_VL6180X.h>
 
 #define TAG_VL6180X "vl6180x"
 
