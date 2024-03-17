@@ -31,4 +31,3 @@ class TSC2007Touchscreen : public touchscreen::Touchscreen, public i2c::I2CDevic
 
 }  // namespace tsc2007
 }  // namespace esphome
-```
