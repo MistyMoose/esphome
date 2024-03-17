@@ -1,10 +1,9 @@
 #include "tsc2007_touchscreen.h"
-
 #include "esphome/core/helpers.h"
 #include "esphome/core/log.h"
 
 namespace esphome {
-namespace tsc2007_touchscreen {
+namespace tsc2007 {
 
 static const char *TAG = "tsc2007_touchscreen";
 
@@ -33,5 +32,5 @@ void TSC2007Touchscreen::update() {
   }
 }
 
-}  // namespace tsc2007_touchscreen
+}  // namespace tsc2007
 }  // namespace esphome
