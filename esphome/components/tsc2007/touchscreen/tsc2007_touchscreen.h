@@ -5,7 +5,7 @@
 #include "esphome/core/component.h"
 #include "esphome/core/hal.h"
 
-amespace esphome {
+namespace esphome {
 namespace tsc2007 {
 
 class TSC2007ButtonListener {
