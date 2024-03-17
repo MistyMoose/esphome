@@ -9,7 +9,7 @@ static const char *TAG = "tsc2007_touchscreen";
 
 void TSC2007Touchscreen::setup() {
   ESP_LOGCONFIG(TAG, "Setting up TSC2007 Touchscreen...");
-  if (!this->begin()) {  // Use the begin() method from i2c::I2CDevice
+  if (!this->write()) {  // Use the begin() method from i2c::I2CDevice
     ESP_LOGE(TAG, "Failed to initialize TSC2007");
     this->mark_failed();
     return;
@@ -25,7 +25,7 @@ void TSC2007Touchscreen::dump_config() {
 
 void TSC2007Touchscreen::update() {
   uint16_t x, y, z1, z2;
-  if (this->read_touch(&x, &y, &z1, &z2)) {  // Use the read_touch() method from i2c::I2CDevice
+  if (this->read(&x, &y, &z1, &z2)) {  // Use the read_touch() method from i2c::I2CDevice
     this->publish_state(x, y, z1, z2);
   } else {
     ESP_LOGE(TAG, "Failed to read from TSC2007");
